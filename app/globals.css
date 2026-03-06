@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #2E2A5D;
+  --color-primary-foreground: #ffffff;
+
+  --color-accent: #00f0ff;
+  --color-accent-foreground: #161332;
+
+  --color-background: #161332;
+  --color-foreground: #f8fafc;
+
+  --color-card: rgba(46, 42, 93, 0.6);
+  --color-card-border: rgba(255, 255, 255, 0.1);
+
+  --color-navy: #2E2A5D;
+  --color-electric-blue: #00f0ff;
+
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+
+  @keyframes accordion-down {
+    from {
+      height: 0;
+    }
+
+    to {
+      height: var(--radix-accordion-content-height);
+    }
+  }
+
+  @keyframes accordion-up {
+    from {
+      height: var(--radix-accordion-content-height);
+    }
+
+    to {
+      height: 0;
+    }
+  }
+}
+
+@layer base {
+  :root {
+    --background: #161332;
+    /* Deep indigo */
+    --foreground: #f8fafc;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-white/10;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    background-image: radial-gradient(circle at 15% 50%, rgba(0, 240, 255, 0.05), transparent 25%),
+      radial-gradient(circle at 85% 30%, rgba(0, 240, 255, 0.05), transparent 25%);
+    background-attachment: fixed;
+  }
+}
+
+.glass-card {
+  @apply bg-card border border-card-border backdrop-blur-md rounded-2xl shadow-xl;
+}
+
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-white to-white/70;
+}
+
+.text-gradient-accent {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-electric-blue to-blue-400;
+}
+
+/* Base custom scrollbar for webkit */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #161332;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}

@@ -1,0 +1,155 @@
+"use client";
+
+import Link from "next/link";
+import Image from "next/image";
+import { motion } from "framer-motion";
+import { Mail, Lock, Eye, EyeOff, ArrowLeft } from "lucide-react";
+import { useState } from "react";
+
+export default function LoginPage() {
+    const [showPassword, setShowPassword] = useState(false);
+
+    return (
+        <div className="min-h-screen bg-[#161332] flex">
+            {/* Left Side - Form */}
+            <div className="w-full lg:w-1/2 flex flex-col pt-8 px-8 md:px-16 lg:px-24 xl:px-32 relative z-10 overflow-y-auto">
+                {/* Header */}
+                <div className="flex items-center justify-between w-full mb-12">
+                    <Link href="/" className="flex items-center gap-2 group">
+                        <ArrowLeft className="w-5 h-5 text-slate-400 group-hover:text-electric-blue transition-colors" />
+                        <span className="text-sm font-medium text-slate-400 group-hover:text-electric-blue transition-colors">Home</span>
+                    </Link>
+                    <Link href="/" className="flex items-center gap-2">
+                        <Image src="/logo.png" alt="Chime Logo" width={32} height={32} />
+                        <span className="text-xl font-bold tracking-tight text-white">Chime</span>
+                    </Link>
+                </div>
+
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5 }}
+                    className="flex-1 flex flex-col justify-center max-w-md w-full mx-auto pb-12"
+                >
+                    <h1 className="text-3xl md:text-4xl font-bold text-white mb-3">Welcome Back!</h1>
+                    <p className="text-slate-400 text-sm md:text-base mb-8">
+                        Sign in to access your dashboard and continue optimizing your call monitoring process.
+                    </p>
+
+                    <form className="space-y-5" onSubmit={(e) => e.preventDefault()}>
+                        <div className="space-y-1.5">
+                            <label className="text-sm font-medium text-slate-300">Email</label>
+                            <div className="relative">
+                                <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-500" />
+                                <input
+                                    type="email"
+                                    placeholder="Enter your email"
+                                    className="w-full bg-navy/50 border border-white/10 rounded-xl py-3 pl-11 pr-4 text-white placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-electric-blue/50 focus:border-transparent transition-all"
+                                />
+                            </div>
+                        </div>
+
+                        <div className="space-y-1.5">
+                            <label className="text-sm font-medium text-slate-300">Password</label>
+                            <div className="relative">
+                                <Lock className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-500" />
+                                <input
+                                    type={showPassword ? "text" : "password"}
+                                    placeholder="Enter your password"
+                                    className="w-full bg-navy/50 border border-white/10 rounded-xl py-3 pl-11 pr-12 text-white placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-electric-blue/50 focus:border-transparent transition-all"
+                                />
+                                <button
+                                    type="button"
+                                    onClick={() => setShowPassword(!showPassword)}
+                                    className="absolute right-4 top-1/2 -translate-y-1/2 text-slate-500 hover:text-white transition-colors"
+                                >
+                                    {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
+                                </button>
+                            </div>
+                            <div className="flex justify-end mt-2">
+                                <Link href="#" className="text-sm text-electric-blue hover:text-electric-blue/80 font-medium">
+                                    Forgot Password?
+                                </Link>
+                            </div>
+                        </div>
+
+                        <button
+                            type="submit"
+                            className="w-full bg-electric-blue hover:bg-electric-blue/90 text-navy font-bold py-3.5 rounded-xl shadow-[0_0_15px_rgba(0,240,255,0.3)] transition-all hover:shadow-[0_0_25px_rgba(0,240,255,0.5)] mt-2"
+                        >
+                            Sign In
+                        </button>
+                    </form>
+
+                    <div className="flex items-center gap-4 my-8">
+                        <div className="flex-1 h-px bg-white/10"></div>
+                        <span className="text-xs text-slate-500 font-medium uppercase">OR</span>
+                        <div className="flex-1 h-px bg-white/10"></div>
+                    </div>
+
+                    <div className="space-y-3">
+                        <button className="w-full flex items-center justify-center gap-3 bg-white hover:bg-gray-100 text-navy font-semibold py-3 rounded-xl transition-colors">
+                            <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4" />
+                                <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853" />
+                                <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05" />
+                                <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335" />
+                            </svg>
+                            Continue with Google
+                        </button>
+                        <button className="w-full flex items-center justify-center gap-3 bg-[#110f29] border border-white/10 hover:bg-[#110f29]/80 text-white font-semibold py-3 rounded-xl transition-colors">
+                            <svg className="w-5 h-5 text-white" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.04 2.26-.74 3.58-.8 1.46-.07 2.7.62 3.55 1.7-3.02 1.73-2.52 5.86.35 7.04-.68 1.73-1.6 3.43-2.56 4.23zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" />
+                            </svg>
+                            Continue with Apple
+                        </button>
+                    </div>
+
+                    <p className="text-center text-slate-400 mt-8 text-sm">
+                        Don't have an Account? <Link href="/signup" className="text-electric-blue font-semibold hover:underline">Sign Up</Link>
+                    </p>
+                </motion.div>
+            </div>
+
+            {/* Right Side - Graphic & Testimonial */}
+            <div className="hidden lg:flex w-1/2 bg-[#2E2A5D] relative overflow-hidden items-end justify-center p-16">
+                {/* Background Decor */}
+                <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-electric-blue/10 rounded-full blur-[120px] -z-0 translate-x-1/3 -translate-y-1/3" />
+                <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-[#161332]/50 rounded-full blur-[100px] -z-0 -translate-x-1/4 translate-y-1/4" />
+
+                <div className="relative z-10 w-full max-w-lg mb-12">
+                    <h2 className="text-4xl xl:text-5xl font-bold text-white leading-tight mb-8">
+                        Revolutionize Call Monitoring with <span className="text-electric-blue">Smarter Tracking</span>
+                    </h2>
+
+                    <div className="bg-navy/40 backdrop-blur-md border border-white/10 p-8 rounded-2xl">
+                        <svg className="w-10 h-10 text-electric-blue/50 mb-4" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                        </svg>
+                        <p className="text-lg text-slate-300 italic mb-6">
+                            "Chime has completely transformed our monitoring process. It's reliable, efficient, and ensures our remote teams are always secure and compliant."
+                        </p>
+                        <div className="flex items-center gap-4">
+                            <div className="w-12 h-12 bg-electric-blue/20 rounded-full flex items-center justify-center text-electric-blue font-bold text-xl border border-electric-blue/30">
+                                S
+                            </div>
+                            <div>
+                                <h4 className="text-white font-semibold">Sarah Jenkins</h4>
+                                <p className="text-sm text-slate-400">Employer at TechNova</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="mt-16">
+                        <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-4">Join 1K+ Teams</p>
+                        <div className="flex items-center gap-6 opacity-60">
+                            <div className="flex items-center gap-2 font-bold text-lg text-white"><span className="w-5 h-5 bg-white rounded-full"></span> TechNova</div>
+                            <div className="flex items-center gap-2 font-bold text-lg text-white"><span className="w-5 h-5 bg-white rounded-sm"></span> Apex</div>
+                            <div className="flex items-center gap-2 font-bold text-lg text-white"><span className="w-5 h-5 border-2 border-white rounded-full"></span> DevCore</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+}
