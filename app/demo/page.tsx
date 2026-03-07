@@ -171,7 +171,7 @@ export default function DemoPage() {
                                 <div className="h-16 border-b border-white/10 flex items-center justify-between px-6 bg-[#161332]">
                                     <div className="flex-1"></div>
                                     <Link href="/" className="flex items-center gap-2">
-                                        <Image src="/logo.png" alt="Chime Logo" width={28} height={28} />
+                                        <Image src="/logo1.png" alt="Chime Logo" width={28} height={28} />
                                         <span className="text-xl font-bold tracking-tight text-white">Chime</span>
                                     </Link>
                                     <div className="flex-1 flex justify-end">
@@ -297,7 +297,7 @@ export default function DemoPage() {
 
                                 <div className="flex flex-col items-center mb-10">
                                     <div className="w-16 h-16 bg-navy rounded-full flex items-center justify-center border-2 border-electric-blue mb-4 shadow-[0_0_20px_rgba(0,240,255,0.3)]">
-                                        <Image src="/logo.png" alt="Logo" width={32} height={32} />
+                                        <Image src="/logo1.png" alt="Logo" width={32} height={32} />
                                     </div>
                                     <h2 className="text-2xl font-bold text-white mb-1">Chime Demo</h2>
                                     <div className="flex items-center gap-4 text-sm font-medium text-electric-blue">
@@ -328,8 +328,8 @@ export default function DemoPage() {
                             </div>
 
                             {/* Details Side */}
-                            <div className="w-full md:w-1/2 bg-[#110f29] p-8 md:p-12 flex flex-col pt-12 md:pt-16">
-                                <div className="mb-10">
+                            <div className="w-full md:w-1/2 bg-[#110f29] p-8 md:p-12 flex flex-col">
+                                <div className="mb-8">
                                     <h3 className="text-sm font-semibold text-slate-300 mb-4 uppercase tracking-wider">Meeting details</h3>
                                     <div className="space-y-4">
                                         <div className="flex items-start gap-4 p-4 rounded-xl border border-white/5 bg-white/5">
@@ -349,7 +349,33 @@ export default function DemoPage() {
                                     </div>
                                 </div>
 
-                                <div className="flex-1 border-t border-white/10 pt-8">
+                                <div className="mb-8 border-t border-white/10 pt-8">
+                                    <h3 className="text-sm font-semibold text-slate-300 mb-4 uppercase tracking-wider">Your Details</h3>
+                                    <div className="space-y-4">
+                                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                            <div>
+                                                <label className="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-1.5 block">Full Name</label>
+                                                <input type="text" placeholder="John Doe" className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-electric-blue transition-colors" />
+                                            </div>
+                                            <div>
+                                                <label className="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-1.5 block">Email Address</label>
+                                                <input type="email" placeholder="john@company.com" className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-electric-blue transition-colors" />
+                                            </div>
+                                        </div>
+                                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                            <div>
+                                                <label className="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-1.5 block">Contact Number</label>
+                                                <input type="tel" placeholder="+1 (555) 000-0000" className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-electric-blue transition-colors" />
+                                            </div>
+                                            <div>
+                                                <label className="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-1.5 block">Company Name</label>
+                                                <input type="text" placeholder="Acme Inc" className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-electric-blue transition-colors" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="border-t border-white/10 pt-8">
                                     <div className="flex items-center justify-between mb-6">
                                         <div>
                                             <h3 className="text-sm font-bold text-white">What time works best?</h3>
@@ -360,18 +386,18 @@ export default function DemoPage() {
                                         </div>
                                     </div>
 
-                                    <div className="grid grid-cols-2 gap-3 mb-8">
+                                    <div className="grid grid-cols-3 gap-3 mb-8">
                                         {timeSlots.map((time, i) => (
                                             <button
                                                 key={i}
-                                                className="py-3 border border-white/10 rounded-xl text-sm font-medium text-slate-300 hover:border-electric-blue/50 hover:bg-electric-blue/5 hover:text-white transition-all focus:ring-2 focus:ring-electric-blue focus:bg-electric-blue focus:text-navy focus:border-transparent outline-none"
+                                                className="py-3 border border-white/10 rounded-xl text-[11px] font-medium text-slate-300 hover:border-electric-blue/50 hover:bg-electric-blue/5 hover:text-white transition-all focus:ring-2 focus:ring-electric-blue focus:bg-electric-blue focus:text-navy focus:border-transparent outline-none"
                                             >
                                                 {time}
                                             </button>
                                         ))}
                                     </div>
 
-                                    <button className="w-full bg-slate-100 hover:bg-white text-[#161332] font-bold py-4 rounded-xl shadow-lg transition-all hover:shadow-xl mt-auto">
+                                    <button className="w-full bg-slate-100 hover:bg-white text-[#161332] font-bold py-4 rounded-xl shadow-lg transition-all hover:shadow-xl">
                                         Confirm Booking
                                     </button>
                                 </div>

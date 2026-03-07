@@ -180,7 +180,7 @@ export default function ScreenMonitoringPage() {
                             initial="hidden"
                             whileInView="show"
                             viewport={{ once: true }}
-                            className="bg-[#110f29]/80 backdrop-blur-md border border-cyan-400/30 rounded-3xl p-8 hover:bg-[#110f29] transition-all hover:shadow-[0_0_30px_rgba(34,211,238,0.1)] group flex flex-col"
+                            className="h-full bg-[#110f29]/80 backdrop-blur-md border border-cyan-400/30 rounded-3xl p-8 hover:bg-[#110f29] transition-all hover:shadow-[0_0_30px_rgba(34,211,238,0.1)] group flex flex-col"
                         >
                             <div className="w-16 h-16 bg-cyan-400/10 rounded-2xl flex items-center justify-center mb-6 border border-cyan-400/20 group-hover:scale-110 transition-transform">
                                 <ShieldCheck className="w-8 h-8 text-cyan-400" />
@@ -208,7 +208,7 @@ export default function ScreenMonitoringPage() {
                             whileInView="show"
                             viewport={{ once: true }}
                             transition={{ delay: 0.1 }}
-                            className="bg-[#110f29]/80 backdrop-blur-md border border-electric-blue/30 rounded-3xl p-8 hover:bg-[#110f29] transition-all hover:shadow-[0_0_30px_rgba(0,240,255,0.15)] group flex flex-col transform md:-translate-y-4"
+                            className="h-full bg-[#110f29]/80 backdrop-blur-md border border-electric-blue/30 rounded-3xl p-8 hover:bg-[#110f29] transition-all hover:shadow-[0_0_30px_rgba(0,240,255,0.15)] group flex flex-col"
                         >
                             <div className="w-16 h-16 bg-electric-blue/10 rounded-2xl flex items-center justify-center mb-6 border border-electric-blue/20 group-hover:scale-110 transition-transform shadow-[0_0_15px_rgba(0,240,255,0.2)]">
                                 <Monitor className="w-8 h-8 text-electric-blue" />
@@ -236,7 +236,7 @@ export default function ScreenMonitoringPage() {
                             whileInView="show"
                             viewport={{ once: true }}
                             transition={{ delay: 0.2 }}
-                            className="bg-[#110f29]/80 backdrop-blur-md border border-emerald-400/30 rounded-3xl p-8 hover:bg-[#110f29] transition-all hover:shadow-[0_0_30px_rgba(52,211,153,0.1)] group flex flex-col"
+                            className="h-full bg-[#110f29]/80 backdrop-blur-md border border-emerald-400/30 rounded-3xl p-8 hover:bg-[#110f29] transition-all hover:shadow-[0_0_30px_rgba(52,211,153,0.1)] group flex flex-col"
                         >
                             <div className="w-16 h-16 bg-emerald-400/10 rounded-2xl flex items-center justify-center mb-6 border border-emerald-400/20 group-hover:scale-110 transition-transform">
                                 <Search className="w-8 h-8 text-emerald-400" />
@@ -303,7 +303,7 @@ export default function ScreenMonitoringPage() {
                             <motion.div
                                 key={i}
                                 variants={fadeInUp}
-                                className="bg-[#1a173d]/60 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/5 transition-all group"
+                                className="h-full bg-[#1a173d]/60 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/5 transition-all group flex flex-col"
                             >
                                 <div className="w-12 h-12 bg-white/5 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                                     {feature.icon}

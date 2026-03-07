@@ -61,7 +61,7 @@ export default function CallManagementPage() {
                                     <div className="w-3 h-3 rounded-full bg-red-500/80"></div>
                                     <div className="w-3 h-3 rounded-full bg-yellow-500/80"></div>
                                     <div className="w-3 h-3 rounded-full bg-green-500/80"></div>
-                                    <div className="ml-4 text-xs text-slate-300 font-medium flex items-center gap-2"><Image src="/logo.png" alt="logo" width={16} height={16} /> Chime Dashboard</div>
+                                    <div className="ml-4 text-xs text-slate-300 font-medium flex items-center gap-2"><Image src="/" alt="logo" width={16} height={16} /> Chime Dashboard</div>
                                 </div>
                                 <div className="p-6 flex flex-col gap-6 h-full">
                                     <h3 className="text-lg font-bold text-white">Calls Dashboard</h3>
@@ -179,7 +179,7 @@ export default function CallManagementPage() {
                             initial="hidden"
                             whileInView="show"
                             viewport={{ once: true }}
-                            className="bg-[#110f29]/80 backdrop-blur-md border border-electric-blue/30 rounded-3xl p-8 hover:bg-[#110f29] transition-all hover:shadow-[0_0_30px_rgba(0,240,255,0.1)] group flex flex-col"
+                            className="h-full bg-[#110f29]/80 backdrop-blur-md border border-electric-blue/30 rounded-3xl p-8 hover:bg-[#110f29] transition-all hover:shadow-[0_0_30px_rgba(0,240,255,0.1)] group flex flex-col"
                         >
                             <div className="w-16 h-16 bg-blue-500/10 rounded-2xl flex items-center justify-center mb-6 border border-blue-500/20 group-hover:scale-110 transition-transform">
                                 <Headphones className="w-8 h-8 text-blue-400" />
@@ -210,7 +210,7 @@ export default function CallManagementPage() {
                             whileInView="show"
                             viewport={{ once: true }}
                             transition={{ delay: 0.1 }}
-                            className="bg-[#110f29]/80 backdrop-blur-md border border-orange-400/30 rounded-3xl p-8 hover:bg-[#110f29] transition-all hover:shadow-[0_0_30px_rgba(251,146,60,0.1)] group flex flex-col transform md:-translate-y-4"
+                            className="h-full bg-[#110f29]/80 backdrop-blur-md border border-orange-400/30 rounded-3xl p-8 hover:bg-[#110f29] transition-all hover:shadow-[0_0_30px_rgba(251,146,60,0.1)] group flex flex-col"
                         >
                             <div className="w-16 h-16 bg-orange-400/10 rounded-2xl flex items-center justify-center mb-6 border border-orange-400/20 group-hover:scale-110 transition-transform">
                                 <PhoneCall className="w-8 h-8 text-orange-400" />
@@ -241,7 +241,7 @@ export default function CallManagementPage() {
                             whileInView="show"
                             viewport={{ once: true }}
                             transition={{ delay: 0.2 }}
-                            className="bg-[#110f29]/80 backdrop-blur-md border border-emerald-400/30 rounded-3xl p-8 hover:bg-[#110f29] transition-all hover:shadow-[0_0_30px_rgba(52,211,153,0.1)] group flex flex-col"
+                            className="h-full bg-[#110f29]/80 backdrop-blur-md border border-emerald-400/30 rounded-3xl p-8 hover:bg-[#110f29] transition-all hover:shadow-[0_0_30px_rgba(52,211,153,0.1)] group flex flex-col"
                         >
                             <div className="w-16 h-16 bg-emerald-400/10 rounded-2xl flex items-center justify-center mb-6 border border-emerald-400/20 group-hover:scale-110 transition-transform">
                                 <User className="w-8 h-8 text-emerald-400" />
@@ -334,7 +334,7 @@ export default function CallManagementPage() {
                             <motion.div
                                 key={i}
                                 variants={fadeInUp}
-                                className={`bg-[#1a173d]/60 backdrop-blur-sm border ${feature.color} rounded-2xl p-8 hover:bg-white/5 transition-all text-center flex flex-col items-center group`}
+                                className={`h-full bg-[#1a173d]/60 backdrop-blur-sm border ${feature.color} rounded-2xl p-8 hover:bg-white/5 transition-all text-center flex flex-col items-center group`}
                             >
                                 <div className={`w-14 h-14 ${feature.iconBg} rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
                                     {feature.icon}

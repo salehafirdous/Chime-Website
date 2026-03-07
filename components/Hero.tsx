@@ -158,20 +158,21 @@ export default function Hero() {
             </div>
 
             {/* Scroll Indicator */}
-            <motion.div
+            <motion.button
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1, duration: 1 }}
-                className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
+                onClick={() => document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' })}
+                className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 cursor-pointer group z-20"
             >
-                <span className="text-xs font-medium text-slate-400 uppercase tracking-widest hidden md:block">Scroll to explore</span>
+                <span className="text-xs font-medium text-slate-400 group-hover:text-electric-blue transition-colors uppercase tracking-widest hidden md:block transition-all">Scroll to explore</span>
                 <motion.div
                     animate={{ y: [0, 8, 0] }}
                     transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
                 >
-                    <ChevronDown className="w-6 h-6 text-slate-400" />
+                    <ChevronDown className="w-6 h-6 text-slate-400 group-hover:text-electric-blue transition-colors" />
                 </motion.div>
-            </motion.div>
+            </motion.button>
         </section>
     );
 }

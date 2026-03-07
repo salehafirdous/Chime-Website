@@ -76,7 +76,7 @@ export default function EmployeeMonitoringPage() {
                                 <div className="flex h-[calc(100%-2.5rem)]">
                                     {/* Sidebar */}
                                     <div className="w-16 border-r border-white/10 flex flex-col items-center py-4 gap-4 bg-[#161332]">
-                                        <div className="w-8 h-8 rounded-lg bg-electric-blue/20 flex items-center justify-center mb-4 border border-electric-blue/30"><Image src="/logo.png" alt="logo" width={20} height={20} /></div>
+                                        <div className="w-8 h-8 rounded-lg bg-electric-blue/20 flex items-center justify-center mb-4 border border-electric-blue/30"><Image src="/logo1.png" alt="logo" width={20} height={20} /></div>
                                         <BarChart className="w-5 h-5 text-electric-blue" />
                                         <Monitor className="w-5 h-5 text-slate-500" />
                                         <Clock className="w-5 h-5 text-slate-500" />

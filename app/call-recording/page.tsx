@@ -152,7 +152,7 @@ export default function CallRecordingPage() {
                                 </button>
                             </div>
                             <Link href="/" className="flex items-center gap-2">
-                                <Image src="/logo.png" alt="Chime Logo" width={28} height={28} />
+                                <Image src="/logo1.png" alt="Chime Logo" width={28} height={28} />
                                 <span className="text-xl font-bold tracking-tight text-white hidden sm:block">Chime</span>
                             </Link>
                             <div className="flex-1 flex justify-end">
@@ -196,7 +196,7 @@ export default function CallRecordingPage() {
                                         <th className="px-6 py-4 border border-white/5">Type</th>
                                         <th className="px-6 py-4 border border-white/5">Start Time</th>
                                         <th className="px-6 py-4 border border-white/5">Duration</th>
-                                        <th className="px-6 py-4 border border-white/5">Transcription</th>
+                                        <th className="px-6 py-4 border border-white/5">Sentiment</th>
                                         <th className="px-6 py-4 border border-white/5">Audio</th>
                                         <th className="px-6 py-4 rounded-tr-xl border border-white/5 text-center">Download</th>
                                     </tr>

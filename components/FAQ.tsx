@@ -20,9 +20,13 @@ const faqs = [
         answer: "Absolutely. Depending on your plan, recordings are stored securely in the cloud and can be played back or downloaded directly to your local device at any time."
     },
     {
-        question: "Does it work remotely?",
-        answer: "Yes, once the initial setup is complete, Chime operates silently in the background. You can access all logs and control settings remotely via the web dashboard from any browser."
-    }
+        question: "Does Chime drain the phone's battery?",
+        answer: "No, Chime is engineered to be extremely lightweight. Our background agent uses advanced task scheduling to ensure it has less than a 1% impact on daily battery life."
+    },
+    {
+        question: "How many devices can I monitor?",
+        answer: "This depends on your chosen plan. Our 'Pro' plan allows for up to 3 devices, while 'Enterprise' plans support unlimited device scaling for large teams or families."
+    },
 ];
 
 export default function FAQ() {
