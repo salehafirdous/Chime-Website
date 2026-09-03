@@ -11,14 +11,14 @@ const features = [
     "Call Recording",
     "Call Management",
     "Screen Monitoring",
-    "Screen Time Control",
     "WhatsApp Monitoring",
+    "Transcription",
 ];
 
 const solutions = [
     "Employee Monitoring",
     "Call Management",
-    "Location Tracking",
+
 ];
 
 export default function Navbar() {
@@ -48,7 +48,7 @@ export default function Navbar() {
                     <div className="flex items-center justify-between">
                         {/* Logo */}
                         <Link href="/" className="flex items-center gap-2 group">
-                            <Image src="/logo.png" alt="Chime Logo" width={40} height={40} className="drop-shadow-lg" />
+                            <Image src="/logo1.png" alt="Chime Logo" width={40} height={40} className="drop-shadow-lg" />
                             <span className="text-2xl font-bold tracking-tight text-white">
                                 Chime
                             </span>
@@ -152,7 +152,7 @@ export default function Navbar() {
                                                 {/* Card */}
                                                 <div className="w-[45%] bg-[#110f29] rounded-xl border border-white/10 p-6 flex flex-col justify-center items-center text-center shadow-inner relative overflow-hidden group">
                                                     <div className="absolute inset-0 bg-gradient-to-br from-electric-blue/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                                                    <Image src="/logo.png" alt="Chime Logo" width={64} height={64} className="mb-4 drop-shadow-[0_0_15px_rgba(0,240,255,0.4)]" />
+                                                    <Image src="/logo1.png" alt="Chime Logo" width={64} height={64} className="mb-4 drop-shadow-[0_0_15px_rgba(0,240,255,0.4)]" />
                                                     <h4 className="text-xl font-bold text-white mb-1">Chime</h4>
                                                     <span className="text-electric-blue font-semibold text-sm mb-4">Effortless Safety</span>
                                                     <div className="w-8 h-px bg-white/20 mb-4"></div>
@@ -165,7 +165,7 @@ export default function Navbar() {
                                                     <div className="flex-1">
                                                         <h3 className="text-xs font-bold text-slate-300 mb-4 pb-3 border-b border-white/10 uppercase tracking-widest">Learn</h3>
                                                         <div className="flex flex-col gap-4">
-                                                            <Link href="/signup" className="text-sm font-medium text-slate-400 hover:text-white hover:translate-x-1 transition-all">Contact Us</Link>
+                                                            <Link href="/contact-us" className="text-sm font-medium text-slate-400 hover:text-white hover:translate-x-1 transition-all">Contact Us</Link>
                                                             <Link href="/blog" className="text-sm font-medium text-slate-400 hover:text-white hover:translate-x-1 transition-all">Blogs</Link>
                                                             <Link href="/community" className="text-sm font-medium text-slate-400 hover:text-white hover:translate-x-1 transition-all">Community</Link>
                                                         </div>
@@ -173,7 +173,7 @@ export default function Navbar() {
                                                     <div className="flex-1">
                                                         <h3 className="text-xs font-bold text-slate-300 mb-4 pb-3 border-b border-white/10 uppercase tracking-widest">Key Concepts</h3>
                                                         <div className="flex flex-col gap-4">
-                                                            <Link href="#" className="text-sm font-medium text-slate-400 hover:text-white hover:translate-x-1 transition-all">Phone Calls</Link>
+                                                            <Link href="/call-recording" className="text-sm font-medium text-slate-400 hover:text-white hover:translate-x-1 transition-all">Phone Calls</Link>
                                                             <Link href="/why-chime" className="text-sm font-medium text-slate-400 hover:text-white hover:translate-x-1 transition-all">Why Chime</Link>
                                                             <Link href="/parental-controls" className="text-sm font-medium text-slate-400 hover:text-white hover:translate-x-1 transition-all">Parental Control</Link>
                                                             <Link href="#" className="text-sm font-medium text-slate-400 hover:text-white hover:translate-x-1 transition-all">Restrictions</Link>
@@ -242,7 +242,7 @@ export default function Navbar() {
                         >
                             <div className="flex items-center justify-between mb-8">
                                 <div className="flex items-center gap-2 group">
-                                    <Image src="/logo.png" alt="Chime Logo" width={40} height={40} className="drop-shadow-lg" />
+                                    <Image src="/logo1.png" alt="Chime Logo" width={40} height={40} className="drop-shadow-lg" />
                                     <span className="text-2xl font-bold tracking-tight text-white">
                                         Chime
                                     </span>
@@ -297,7 +297,7 @@ export default function Navbar() {
                                 <div>
                                     <h3 className="text-sm font-semibold text-electric-blue mb-3 uppercase tracking-wider">Resources</h3>
                                     <div className="flex flex-col gap-3 pl-3 border-l border-white/10">
-                                        <Link href="/signup" className="text-slate-300 hover:text-white transition-colors" onClick={() => setMobileMenuOpen(false)}>Contact Us</Link>
+                                        <Link href="/contact-us" className="text-slate-300 hover:text-white transition-colors" onClick={() => setMobileMenuOpen(false)}>Contact Us</Link>
                                         <Link href="/blog" className="text-slate-300 hover:text-white transition-colors" onClick={() => setMobileMenuOpen(false)}>Blogs</Link>
                                         <Link href="/community" className="text-slate-300 hover:text-white transition-colors" onClick={() => setMobileMenuOpen(false)}>Community</Link>
                                         <Link href="/why-chime" className="text-slate-300 hover:text-white transition-colors" onClick={() => setMobileMenuOpen(false)}>Why Chime</Link>

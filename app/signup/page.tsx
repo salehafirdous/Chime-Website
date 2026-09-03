@@ -19,7 +19,7 @@ export default function SignupPage() {
                     <span className="text-sm font-medium text-slate-400 group-hover:text-electric-blue transition-colors">Home</span>
                 </Link>
                 <Link href="/" className="flex items-center gap-2">
-                    <Image src="/logo.png" alt="Chime Logo" width={36} height={36} />
+                    <Image src="/logo1.png" alt="Chime Logo" width={36} height={36} />
                     <span className="text-2xl font-bold tracking-tight text-white">Chime</span>
                 </Link>
                 <div className="w-[100px]"></div> {/* Spacer to center logo */}

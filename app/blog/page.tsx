@@ -133,7 +133,7 @@ export default function BlogPage() {
                                 <div className="absolute inset-0 bg-black/20"></div>
                                 <div className="absolute -bottom-24 -right-24 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
                                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/20 shadow-2xl transform group-hover:scale-105 transition-transform duration-500">
-                                    <Image src="/logo.png" alt="Chime" width={80} height={80} className="drop-shadow-2xl" />
+                                    <Image src="/logo1.png" alt="Chime" width={80} height={80} className="drop-shadow-2xl" />
                                 </div>
                             </div>
 

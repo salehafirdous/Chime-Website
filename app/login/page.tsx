@@ -20,7 +20,7 @@ export default function LoginPage() {
                         <span className="text-sm font-medium text-slate-400 group-hover:text-electric-blue transition-colors">Home</span>
                     </Link>
                     <Link href="/" className="flex items-center gap-2">
-                        <Image src="/logo.png" alt="Chime Logo" width={32} height={32} />
+                        <Image src="/logo1.png" alt="Chime Logo" width={32} height={32} />
                         <span className="text-xl font-bold tracking-tight text-white">Chime</span>
                     </Link>
                 </div>

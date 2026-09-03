@@ -9,7 +9,7 @@ export default function Footer() {
                 <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 mb-16">
                     <div className="col-span-2 lg:col-span-2">
                         <Link href="/" className="flex items-center gap-2 mb-6 group inline-flex">
-                            <Image src="/logo.png" alt="Chime Logo" width={32} height={32} className="drop-shadow-lg" />
+                            <Image src="/logo1.png" alt="Chime Logo" width={32} height={32} className="drop-shadow-lg" />
                             <span className="text-xl font-bold tracking-tight text-white">
                                 Chime
                             </span>
@@ -38,8 +38,9 @@ export default function Footer() {
                         <ul className="space-y-4">
                             <li><Link href="/call-recording" className="text-slate-400 hover:text-white transition-colors">Call Recording</Link></li>
                             <li><Link href="/screen-monitoring" className="text-slate-400 hover:text-white transition-colors">Screen Monitoring</Link></li>
-                            <li><Link href="/screen-time-control" className="text-slate-400 hover:text-white transition-colors">Screen Time Control</Link></li>
+                            {/* <li><Link href="/screen-time-control" className="text-slate-400 hover:text-white transition-colors">Screen Time Control</Link></li> */}
                             <li><Link href="/whatsapp-monitoring" className="text-slate-400 hover:text-white transition-colors">WhatsApp Monitoring</Link></li>
+                            <li><Link href="/transcription" className="text-slate-400 hover:text-white transition-colors">Transcription</Link></li>
                             <li><Link href="/pricing" className="text-slate-400 hover:text-white transition-colors">Pricing</Link></li>
                         </ul>
                     </div>
@@ -49,7 +50,7 @@ export default function Footer() {
                         <ul className="space-y-4">
                             <li><Link href="/employee-monitoring" className="text-slate-400 hover:text-white transition-colors">Employee Monitoring</Link></li>
                             <li><Link href="/call-management" className="text-slate-400 hover:text-white transition-colors">Call Management</Link></li>
-                            <li><Link href="/location-tracking" className="text-slate-400 hover:text-white transition-colors">Location Tracking</Link></li>
+                            {/* <li><Link href="/location-tracking" className="text-slate-400 hover:text-white transition-colors">Location Tracking</Link></li> */}
                             <li><Link href="/parental-controls" className="text-slate-400 hover:text-white transition-colors">Parental Controls</Link></li>
                         </ul>
                     </div>
@@ -59,6 +60,7 @@ export default function Footer() {
                         <ul className="space-y-4">
                             <li><Link href="/help-center" className="text-slate-400 hover:text-white transition-colors">Help Center</Link></li>
                             <li><Link href="/api-documentation" className="text-slate-400 hover:text-white transition-colors">API Documentation</Link></li>
+                            <li><Link href="/contact-us" className="text-slate-400 hover:text-white transition-colors">Contact Us</Link></li>
                             <li><Link href="/blog" className="text-slate-400 hover:text-white transition-colors">Blog</Link></li>
                             <li><Link href="/community" className="text-slate-400 hover:text-white transition-colors">Community</Link></li>
                         </ul>
@@ -67,7 +69,7 @@ export default function Footer() {
 
                 <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
                     <p className="text-slate-500 text-sm">
-                        &copy; {new Date().getFullYear()} Chime Security Inc. All rights reserved.
+                        &copy; {new Date().getFullYear()} RightBrain Infotech. All rights reserved.
                     </p>
                     <div className="flex gap-6 text-sm">
                         <Link href="#" className="text-slate-500 hover:text-white transition-colors">Privacy Policy</Link>

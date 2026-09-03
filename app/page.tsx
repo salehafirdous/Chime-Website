@@ -9,6 +9,7 @@ import Testimonials from "@/components/Testimonials";
 import PricingPreview from "@/components/PricingPreview";
 import FAQ from "@/components/FAQ";
 import CTASection from "@/components/CTASection";
+import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -24,6 +25,7 @@ export default function Home() {
       <Testimonials />
       <PricingPreview />
       <FAQ />
+      <ContactSection />
       <CTASection />
       <Footer />
     </main>
